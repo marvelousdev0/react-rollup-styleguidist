@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import cx from 'classnames';
-import './styles.css';
+import styles from './Button.module.scss';
 
 export interface IButtonProps {
   onClick: () => void;
@@ -10,7 +10,7 @@ export interface IButtonProps {
 }
 
 export const Button: FC<IButtonProps> = ({ onClick, disabled, className, text }) => (
-  <button type="button" className={cx('button', className)} onClick={onClick} disabled={disabled}>
+  <button type="button" className={cx(styles.button, className)} onClick={onClick} disabled={disabled}>
     {text}
   </button>
 );
